@@ -1,0 +1,25 @@
+{
+  "name": "wljs-esm-support",
+  "version": "0.0.1",
+  "description": "Allows to build and execute ESM modules in WLJS Editor",
+  "scripts": {
+    "build": "node --max-old-space-size=8192 ./node_modules/.bin/rollup --config rollup.config.mjs"
+  },
+  "wljs-meta": {
+    "wl": "src/processor.wl",
+    "wlkernel": "src/kernel.wl",
+    "styles": "src/style.css",
+    "jsmodule": "src/kernel.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JerryI/wljs-esm-support"
+  },
+  "usersone": true,
+  "dependencies": {
+    "rollup": "^3.21.6"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  }
+}

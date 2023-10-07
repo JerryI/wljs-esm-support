@@ -26,5 +26,20 @@ this.onreturn = () => {
 }
 ```
 
+## Only for OSX users
+There is a bug in Mathematica, that `PATH` variable differs from your terminal in OS (see an [issue](https://mathematica.stackexchange.com/questions/99704/why-does-mathematica-use-a-different-path-than-terminal)).
+
+__How to fix__
+Open your terminal app
+```bash
+echo $PATH
+```
+and then copy the content to a new cell in the notebook
+```mathematica
+SetEnvironment["PATH" -> "<your path variable>"]
+```
+
+After that it will work properly.
+
 ## License
 Project is released under the GNU General Public License (GPL).

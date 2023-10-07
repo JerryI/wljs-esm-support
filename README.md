@@ -1,4 +1,4 @@
-# WLJS JS support package
+# WLJS ESM modules support package
 **An extension for [WLJS-Editor](https://github.com/JerryI/wljs-editor) to add JS type of cells with ESbuild bundler**
 
 *requires NodeJS to be installed on your pc*

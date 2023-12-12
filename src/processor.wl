@@ -45,7 +45,7 @@ With[{path = (DirectoryName[JerryI`WolframJSFrontend`Notebook`Notebooks[JerryI`W
 ESMQ[str_]       := Length[StringCases[StringSplit[str, "\n"] // First, RegularExpression["^\\.(esm|cjs)$"]]] > 0;
 
 
-ESMrocessor[expr_String, signature_String, callback_] := Module[{str = StringDrop[expr, StringLength[First[StringSplit[expr, "\n"]]] ], output,r},
+ESMrocessor[expr_String, signature_String, parent_, callback_] := Module[{str = StringDrop[expr, StringLength[First[StringSplit[expr, "\n"]]] ], output,r},
   Print["ESMrocessor!"];
   r = ESBuild[str];
   If[r["ExitCode"] === 0, 
